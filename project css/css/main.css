@@ -1,0 +1,176 @@
+/*creat reset' style shit ' just to select all elements on website by using the star symbols*/ 
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*star creating  the background colors*/
+body{
+    background-color: #DBDEE1;
+}
+
+/*-------------- style sheet for header -------------------------------------------------*/
+
+/* 1-logo and background*/
+
+/*Centered logo in the website header*/
+.ST-Container{
+
+ /*usually website have container that set a max "1200px" "margin:0 auto"*/
+    max-width: 1200px; 
+    margin: 0 auto;
+    /*border: 1px solid red;*/ /*for tesy*/
+}
+
+/*backgroud header*/
+.ST-header{
+    background:#fff ;
+}
+ 
+/* 2-do menu design*/
+
+/* we will make all these list items  display in one line*//*child list*/
+.ST-nav ul li {
+   display: inline-block;
+}
+/* style link i will give them a padding in all direction, color and text-decoration*/
+.ST-nav ul li a {
+    padding: 10px 90px; 
+    text-decoration: none;
+    color: #000000;
+    line-height: 101px; /*for get the list items in line with the logo*/
+}
+
+/*make hover effect to the list item when we click */
+.ST-nav ul li a:hover{
+    color: #B4B7BB;
+}
+
+
+
+/* we wanne make the menu beside the logo the we use the float foction*/
+.FL-logo{
+    float: left;
+    /*border: 1px dashed brown ;*/
+}
+.ST-nav{
+    float: right;
+    /*border: 1px solid blue;*/
+}
+
+/*after we make 'float' for 'nav' and 'logo' the background of header disappear we go make't back from the after element with pseudo element that brings them together under one roof or block*/
+.ST-header::after{
+    content: " "; /*blank space*/
+    clear: both;  
+    display: block;
+    visibility: none;
+    /*border: 1px solid red;*/
+} 
+
+
+/*--------------------------2nd part of code--------------------------------------------*/
+
+/*--------------------make style and forme for main-------------------------------------*/ 
+
+
+/*------------------------  make extrat espace for main -------------------------------*/
+.ST-nav ul{
+    margin-bottom: 0px;
+ }
+/*-----------------------------------------------------------------------------------------------------*/
+/*------------------------make margin between header and main --------------------------------------*/
+.ST-content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 70%; /*for refresh the page and make space for sidebar*/
+    float: left;
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*creat a new style for the heading, paragraph, list item beacause in top of code we eliminate the margin and the padding for all*/
+p{
+    margin-bottom: 20px;
+    line-height: unset;
+    
+}
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 10px;
+}
+
+ul,ol{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.ST-writer{
+    float: right;
+    color: #000000;
+
+}
+
+/*for eliminate the espace between block articale and image and make them in same block we use "max-widht" */
+img{
+    display: block;
+    max-width: 100%;
+}
+/*style block articale*/
+.ST-articale{
+    background: #fff;
+    padding: 30px;
+}
+
+/*--------------------------3nd part of code--------------------------------------------*/
+
+/*--------------------------style sidebar block -------------------------------------------*/
+
+.ST-sidebar div{
+    background: #fff;
+    padding: 30px;
+}
+/*seconde float the content to the left and the asidebar to the right for that i back to class "ST-content" and i make to refresh the maximum section or contetnt in page for make space to sidebar */
+
+.ST-sidebar{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 25%;
+    width: 20%;
+    float: right;
+}
+
+.ST-sidebar::after{
+    content: " "; /*blank space*/
+    clear: both;  
+    display: block;
+    visibility: none;
+}
+
+/*thirdly style the liste of sidebar*/
+.ST-ul{
+ content: none;
+}
+.ST-support{
+    margin-left: 10px;
+    margin-bottom: 20px;
+       
+}
+.ST-support a{
+    color: #000000;
+    text-decoration: none;
+}
+.ST-support a:hover{
+    color: #0000ff;
+}
+
+/*----------------------------final part of code -----------------------------------------------*/
+
+/*----------------------------style footer -----------------------------------------------------*/
+.ST-footer{
+    clear: both;
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+/*-------------------------end-------------------------------------------------------------------*/
